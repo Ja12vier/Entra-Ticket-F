@@ -20,7 +20,7 @@ const purchasedTicket = () => {
 
   useEffect(() => {
     axios
-    .get("http://localhost:3000/api/v1/shopping", Config())
+    .get("https://entra-ticket-morning-darkness-5746.fly.dev/api/v1/shopping", Config())
     .then((resp)=>setCarts(resp.data))
     .catch((err)=>console.log(err));
     
@@ -96,7 +96,6 @@ const purchasedTicket = () => {
                     </span>
                     </div>
 
-                    {/* Imagen + info */}
                     <div className="flex gap-4 mt-4">
                     <img
                         src={ticket.imageUrl}
@@ -123,18 +122,15 @@ const purchasedTicket = () => {
                
                     />
 
-                    {/* Aviso */}
                     <div className="mt-4 text-xs font-bold border-t border-black pt-2">
                     ⚠️ ESTE TICKET ES VÁLIDO SOLO UNA VEZ
                     </div>
                   </div>
 
-                {/* CORTE PUNTEADO */}
                   <div className="w-6 flex items-center justify-center">
                     <div className="h-full border-l-2 border-dashed border-black"></div>
                   </div>
 
-                  {/* LADO DERECHO (QR) */}
                   <div className="w-48 bg-black text-white flex flex-col items-center justify-center p-4">
                     <img
                     src={ticket.codeQr}

@@ -76,7 +76,7 @@ const SectionAreas = () => {
 
     const payload = { sectionsAreas: cleanSections };
     axios
-    .post('http://localhost:3000/api/v1/section-areas', payload, Config())
+    .post('https://entra-ticket-morning-darkness-5746.fly.dev/api/v1/section-areas', payload, Config())
     .then(() =>{ 
       setAlert(true);
       setTimeout(()=>{
@@ -94,7 +94,7 @@ const SectionAreas = () => {
 
   useEffect(()=>{
     axios
-    .get(`http://localhost:3000/api/v1/events/${id}`, Config())
+    .get(`https://entra-ticket-morning-darkness-5746.fly.dev/api/v1/events/${id}`, Config())
     .then((resp) => setTicket(resp.data.quantity_ticket))
     .catch((error) => console.log(error))
 

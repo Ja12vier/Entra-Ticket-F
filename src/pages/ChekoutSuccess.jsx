@@ -19,7 +19,7 @@ const ChekoutSuccess = () => {
       dispatch(setIsloader(true));
       if(token){
         hasExecuted.current=true;
-        axios.post(`http://localhost:3000/api/v1/paypals/capture-order?token=${token}`, {},   Config())
+        axios.post(`https://entra-ticket-morning-darkness-5746.fly.dev/api/v1/paypals/capture-order?token=${token}`, {},   Config())
         .then(res => {
             console.log(res.data);
             if (res.data.status === "COMPLETED") {

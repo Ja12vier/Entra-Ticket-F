@@ -16,7 +16,7 @@ export const getThumbsEvents = (searchTerm) =>(dispatch)=>{
    dispatch(setIsloader(true));
    
    axios
-   .get(`http://localhost:3000/api/v1/events/areas?name_event=${searchTerm}`)
+   .get(`https://entra-ticket-morning-darkness-5746.fly.dev/api/v1/events/areas?name_event=${searchTerm}`)
    .then((resp) =>dispatch(setEvents(resp.data)))
    .catch((error) => console.log(error))
    .finally(() =>dispatch(setIsloader(false)))
@@ -26,7 +26,7 @@ export const getThumbsEvents = (searchTerm) =>(dispatch)=>{
 export const getOneEventThunk =(id)=> (dispatch)=>{
     dispatch(setIsloader(true));
     axios
-    .get(`http://localhost:3000/api/v1/events/${id}`)
+    .get(`https://entra-ticket-morning-darkness-5746.fly.dev/api/v1/events/${id}`)
     .then((resp) =>dispatch(setEvents([resp.data])))
     .catch((error) => console.log(error))
     .finally(() =>dispatch(setIsloader(false)))

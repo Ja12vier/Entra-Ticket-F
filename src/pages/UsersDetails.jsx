@@ -24,7 +24,7 @@ const UsersDetails=()=>{
     if(e.target.role.value) data.role=e.target.role.value;
 
      axios 
-     .patch(`http://localhost:3000/api/v1/users/${id}`, data, Config())
+     .patch(`https://entra-ticket-morning-darkness-5746.fly.dev/api/v1/users/${id}`, data, Config())
      .then(()=>{
       setShowAlert(true);
       setTimeout(() => {

@@ -20,7 +20,7 @@ const Carousel = () => {
    dispatch(setIsloader(true));
    
    axios
-   .get(`http://localhost:3000/api/v1/events/areas`)
+   .get(`https://entra-ticket-morning-darkness-5746.fly.dev/api/v1/events/areas`)
    .then((resp) =>setEvents(resp.data))
    .catch((error) => console.log(error))
    .finally(() =>dispatch(setIsloader(false)))

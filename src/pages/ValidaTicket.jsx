@@ -12,7 +12,7 @@ const ValidaTicket = () => {
     const TicketValidation = () => {
         
        axios
-       .get(`http://localhost:3000/api/v1/ticket-seats/validate-ticket/${code}`, Config())
+       .get(`https://entra-ticket-morning-darkness-5746.fly.dev/api/v1/ticket-seats/validate-ticket/${code}`, Config())
        .then((resp)=>{
         if(resp.data.valid){
             soundSuccess.play();
@@ -45,7 +45,6 @@ const ValidaTicket = () => {
     return (
         <div className="max-w-md mx-auto mt-10 p-8 bg-white rounded-3xl shadow-xl border border-slate-100 text-center">
             <Toaster />
-            {/* Icono visual opcional */}
             <div className="mb-4 flex justify-center">
                 <div className="bg-red-100 p-4 rounded-full">
                     <img src={ticketImg} alt="Ticket" className="w-12 h-12" />
@@ -59,8 +58,7 @@ const ValidaTicket = () => {
             <p className="text-slate-500 text-sm mb-6">
                 Ingresa el código de 10 dígitos que aparece en tu comprobante para confirmar que tu cupo está disponible.
             </p>
-
-            {/* Aquí iría tu input de validación */}
+            
             <div className="space-y-4">
                 <input 
                     value={code}

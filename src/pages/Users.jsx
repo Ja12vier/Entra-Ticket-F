@@ -15,7 +15,7 @@ const Users=()=>{
     useEffect(()=>{
       dispatch(setIsloader(true));
       axios
-      .get("http://localhost:3000/api/v1/users", Config())
+      .get("https://entra-ticket-morning-darkness-5746.fly.dev/api/v1/users", Config())
       .then((resp)=>setUsers(resp.data))
       .catch((error)=>console.log(error))
       .finally(()=>dispatch(setIsloader(false)));
@@ -26,7 +26,7 @@ const Users=()=>{
         <Table hoverable>
           <TableHead>
             <TableRow className="bg-gray-50 dark:bg-gray-800">
-              {/* Usamos clases de texto responsivo (text-xs en móvil, text-sm en desktop) */}
+  
               <TableHeadCell className="px-3 py-3 text-xs md:text-sm">Nombre</TableHeadCell>
               <TableHeadCell className="px-3 py-3 text-xs md:text-sm">Cedula</TableHeadCell>
               <TableHeadCell className="px-3 py-3 text-xs md:text-sm">Role</TableHeadCell>

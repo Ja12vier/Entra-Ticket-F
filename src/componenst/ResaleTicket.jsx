@@ -17,7 +17,7 @@ const ResaleTicket = ({ openModal, setOpenModal, id, price }) => {
     
     if (Number(price) > Number(newPrice)) return toast.error("El nuevo precio, no puede ser menor al precio original");
     axios
-      .patch(`http://localhost:3000/api/v1/ticket-seats/${id}/resale`, { resalePrice: newPrice }, Config())
+      .patch(`https://entra-ticket-morning-darkness-5746.fly.dev/api/v1/ticket-seats/${id}/resale`, { resalePrice: newPrice }, Config())
       .then(() => {
         toast.success("Ticket puesto en reventa correctamente");
         setTimeout(() => {

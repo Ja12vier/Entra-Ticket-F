@@ -24,7 +24,7 @@ const Register = () => {
     }; 
     
      axios 
-     .post("http://localhost:3000/api/v1/users",data)
+     .post("https://entra-ticket-morning-darkness-5746.fly.dev/api/v1/users",data)
      .then(()=>{
       setShowAlert(true);
       setTimeout(() => {

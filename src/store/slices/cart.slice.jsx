@@ -18,7 +18,7 @@ export const getCartThunk=()=>(dispatch)=>{
     dispatch(setIsloader(true));
 
     axios
-      .get("http://localhost:3000/api/v1/carts", Config())
+      .get("https://entra-ticket-morning-darkness-5746.fly.dev/api/v1/carts", Config())
       .then((resp)=>dispatch(setCart(resp.data)))
       .catch((error)=>console.log(error))
       .finally(()=>dispatch(setIsloader(false)));

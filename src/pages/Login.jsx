@@ -23,7 +23,7 @@ const Login = () => {
         }
         
         axios
-        .post("http://localhost:3000/api/v1/users/login",data)
+        .post("https://entra-ticket-morning-darkness-5746.fly.dev/api/v1/users/login",data)
         .then((resp) =>{
             console.log(resp.data);
             login(resp.data.token, resp.data.user);

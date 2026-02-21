@@ -44,7 +44,7 @@ const CreateEvents=()=>{
     }
 
      axios 
-     .post("http://localhost:3000/api/v1/events/upload", formData, Config(),)
+     .post("https://entra-ticket-morning-darkness-5746.fly.dev/api/v1/events/upload", formData, Config(),)
      .then((resp)=>{
       setShowAlert(true);
       console.log(resp.data);

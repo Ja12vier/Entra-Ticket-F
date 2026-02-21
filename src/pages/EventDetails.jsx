@@ -21,7 +21,7 @@ const EventDetails = () => {
    
     useEffect(()=>{
         axios
-        .get(`http://localhost:3000/api/v1/events/${id}`)
+        .get(`https://entra-ticket-morning-darkness-5746.fly.dev/api/v1/events/${id}`)
         .then((resp) =>setEvent(resp.data))
         .catch((error) => console.log(error))
     }, [id]);
@@ -61,7 +61,7 @@ const EventDetails = () => {
              };
                 dispatch(setIsloader(true));
              axios
-             .post("http://localhost:3000/api/v1/ticket-seats",data ,Config())
+             .post("https://entra-ticket-morning-darkness-5746.fly.dev/api/v1/ticket-seats",data ,Config())
              .then(() =>{
                dispatch(getCartThunk()),
                dispatch(setShowCart(true)),

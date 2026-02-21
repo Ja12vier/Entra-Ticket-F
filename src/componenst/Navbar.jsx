@@ -54,7 +54,7 @@ const Navbar = () => {
 
     const deleteTicket = (id) => {
         dispatch(setIsloader(true));
-        axios.delete(`http://localhost:3000/api/v1/ticket-seats/${id}`, Config())
+        axios.delete(`https://entra-ticket-morning-darkness-5746.fly.dev/api/v1/ticket-seats/${id}`, Config())
             .then(() => dispatch(getCartThunk()))
             .catch((error) => console.log(error))
             .finally(() => {
@@ -66,7 +66,7 @@ const Navbar = () => {
         e.preventDefault();
         const data = { codeCoupons: e.target[0].value };
         dispatch(setIsloader(true));
-        axios.patch(`http://localhost:3000/api/v1/carts/coupons`, data, Config())
+        axios.patch(`https://entra-ticket-morning-darkness-5746.fly.dev/api/v1/carts/coupons`, data, Config())
             .then(() => {
                 dispatch(getCartThunk());
                 setErrorCupon(true);
@@ -83,7 +83,7 @@ const Navbar = () => {
     const buyCart = (total) => {
         const data = { currencyCode: "USD", totalValue: total };
         dispatch(setIsloader(true));
-        axios.post(`http://localhost:3000/api/v1/paypals/create-order`, data, Config())
+        axios.post(`https://entra-ticket-morning-darkness-5746.fly.dev/api/v1/paypals/create-order`, data, Config())
             .then((resp) => {
                 const aproveUrl = resp.data.responses.links.filter((link) => link.rel === "approve");
                 if (aproveUrl) window.location.href = aproveUrl[0].href;

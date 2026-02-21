@@ -21,7 +21,7 @@ const ticketRebend = () => {
 
   useEffect(() => {
     axios
-    .get("http://localhost:3000/api/v1/ticket-seats/ticket-resale-all", Config())
+    .get("https://entra-ticket-morning-darkness-5746.fly.dev/api/v1/ticket-seats/ticket-resale-all", Config())
     .then((resp)=>setTicket(resp.data))
     .catch((err)=>console.log(err));
     
@@ -31,7 +31,7 @@ const addCart=(ticketId)=>{
     console.log(ticketId);
     dispatch(setIsloader(true));
         axios
-        .get(`http://localhost:3000/api/v1/ticket-seats/${ticketId}/add-cart`, Config())
+        .get(`https://entra-ticket-morning-darkness-5746.fly.dev/api/v1/ticket-seats/${ticketId}/add-cart`, Config())
         .then(() =>{
         console.log("se agrego a cart");
         
@@ -68,7 +68,6 @@ const addCart=(ticketId)=>{
   </h2>
 
   {tickets.length > 0 ? (
-    // Si hay tickets, se mapean aquí
     tickets.map((ticket, index) => (
       <div key={ticket.id} className="relative group">
         <div key={ticket.id} className="relative group">
@@ -135,7 +134,6 @@ const addCart=(ticketId)=>{
       </div>
     ))
   ) : (
-    // DISEÑO CUANDO NO HAY TICKETS
     <div className="max-w-xl mx-auto border-2 border-dashed border-gray-400 rounded-2xl p-12 flex flex-col items-center justify-center text-center bg-white/50 backdrop-blur-sm shadow-sm">
       <div className="bg-gray-200 p-4 rounded-full mb-4">
           <img className="w-20 h-20" src={ticketImg} alt="ticket" />
