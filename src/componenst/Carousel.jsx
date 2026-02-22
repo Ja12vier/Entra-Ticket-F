@@ -37,14 +37,16 @@ const Carousel = () => {
       {slides.map((slide, index) => (
         <div
           key={index}
-          className={`absolute inset-0 flex items-center justify-center transition-transform duration-500 ${
+          className={`absolute inset-0 flex items-center justify-center transition-opacity duration-700 ${
             slide.bg
-          } ${index === currentSlide ? "translate-x-0" : "translate-x-full"}`}
+          } ${index === currentSlide ? "opacity-100" : "opacity-0"}`}
         >
-          <img src={slide.img} alt="image"
-          className="cover w-[80%] h-full object-cover "
+          <img 
+            src={slide.img} 
+            alt="evento"
+            className="h-full w-[40%] object-cover object-top "
           />
-        </div>
+      </div>
       ))}
       <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 space-x-2">
         {slides.map((_, index) => (

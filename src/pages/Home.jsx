@@ -47,22 +47,22 @@ const Home=()=> {
         <h2 className='font-semibold  text-center mb-4 font-serif my-2 text-2xl md:text-3xl'>Los Nuevos en Cartelera</h2>:
         <h2 className='font-semibold mb-4 font-serif text-center text-3xl text-red-600'>No hay eventos</h2>
       }
-          <div className='card grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 gap-6 justify-items-center p-4'>        
+          <div className='card grid  grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 gap-6 justify-items-center p-4'>        
               {
                 events.map((event)=>(
                  <Link  to={`/events/${event.id}`} key={event.id} >
                   <Card
-                    className="w-68  h-[30rem] shadow-lg hover:shadow-2xl  hover:bg-gray-100"
+                    className="w-66  h-120 shadow-lg hover:shadow-2xl hover:bg-gray-100 [&>div]:p-2"
                     renderImage={()=>
-                    <div className="aspect-[4/4] h-80  ">
+                    <div className="aspect-4/4 h-80  ">
                       <img 
-                        className="w-full h-full object-cover rounded-t-lg"
+                        className="w-full h-full  rounded-t-lg"
                         src={event?.imageUrl} 
                         alt="imagen" 
                       />
                     </div>}
                   >
-                    <div>
+                    <div >
                       <p className="font-serif mt-0 text-gray-900 text-sm dark:text-gray-400">
                           Fecha: {event?.date_event}  Hora: {event?.hour_event}
                       </p>
@@ -71,9 +71,6 @@ const Home=()=> {
                       </h5>
                       <p className="font-normal mt-0 text-gray-700 dark:text-gray-400">
                         {event?.place}
-                      </p>
-                        <p className="font-normal mt-0 text-gray-700 dark:text-gray-400">
-                        {event?.type_event}
                       </p>
                     </div>
                    

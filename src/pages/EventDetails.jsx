@@ -92,7 +92,7 @@ const EventDetails = () => {
    
     return (
      <div className="flex justify-center items-center flex-col">
-         <div className="w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] xl:w-[99%] h-80 md:100 xl:h-150 max-w-6xl mx-auto my-6 rounded-lg relative border overflow-hidden">
+         <div className="w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] xl:w-[99%] h-80 md:100 xl:h-150 max-w-6xl mx-auto my-6 rounded-lg relative  overflow-hidden">
             <img 
                 className="object-contain aspect-square opacity-70 mask-radial-at-center mask-radial-from-76% mask-radial-to-86% w-full h-full rounded-lg" 
                 src={event.imageUrl} 
@@ -111,7 +111,7 @@ const EventDetails = () => {
             <br />
             <p className="text-lg max-w-300 text-black/60 font-serif p-4">{event.comment}</p>
          </div>
-         <div className="mb-60">
+         <div className="mb-10">
             <h3 className="font-serif font-semibold text-center mb-4 text-2xl md:text-3xl xl:text-4xl">Ubicación del Evento</h3>
            <iframe
             src={event.mapUrl}
