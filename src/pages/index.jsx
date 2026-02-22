@@ -8,7 +8,7 @@ export {default as Login} from './Login';
 export {default as Register} from './Register';
 export {default as ErrorAutentificacion} from './ErrorAutentificacion';
 export {default as Users} from './Users';
-export {default as UsersDetails} from './usersDetails';
+export {default as UsersDetails} from './UsersDetails';
 export {default as CreateEvents} from './CreateEvents';
 export {default as SectionAreas} from './SectionAreas';
 export {default as PurchasedTicket} from './PurchasedTicket';
