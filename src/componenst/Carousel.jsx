@@ -33,7 +33,7 @@ const Carousel = () => {
 
   
   return (
-    <div className="relative mx-auto h-[500px] w-full overflow-hidden ">
+    <div className="relative mx-auto h-[300px] md:h-[500px] w-full overflow-hidden ">
       {slides.map((slide, index) => (
         <div
           key={index}

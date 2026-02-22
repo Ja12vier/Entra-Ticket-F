@@ -23,7 +23,7 @@ const Home=()=> {
       <Carousel />
       <div className='my-12 flex justify-center items-center flex-col '>
         
-      <div className='border-2 rounded-2xl py-4 md:py-6 w-full max-w-5xl h-auto md:h-24 flex justify-center items-center border-white shadow-sm shadow-black bg-white/5 mx-auto'>
+      <div className='border-2 rounded-2xl py-4 md:py-6 w-76 sm:w-160  md:w-190 lg:w-290 xl:w-full max-w-5xl h-auto md:h-24 flex justify-center items-center border-white shadow-sm shadow-black bg-white/5 mx-auto'>
         <form className="flex items-center justify-center relative w-full max-w-3xl px-4">
           <input
             type="text" 
@@ -41,13 +41,13 @@ const Home=()=> {
           </button>
         </form>
       </div>
-       <div className='w-290 mt-8'>
+       <div className='w-76 sm:w-160  md:w-190 lg:w-260 xl:w-290  mt-8'>
       {
         events.length>0?
         <h2 className='font-semibold  text-center mb-4 font-serif my-2 text-2xl md:text-3xl'>Los Nuevos en Cartelera</h2>:
         <h2 className='font-semibold mb-4 font-serif text-center text-3xl text-red-600'>No hay eventos</h2>
       }
-          <div className='card grid  grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 gap-6 justify-items-center p-4'>        
+          <div className='card grid  grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4   gap-6 justify-items-center  p-4'>        
               {
                 events.map((event)=>(
                  <Link  to={`/events/${event.id}`} key={event.id} >

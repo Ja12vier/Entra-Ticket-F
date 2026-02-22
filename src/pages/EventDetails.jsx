@@ -111,21 +111,22 @@ const EventDetails = () => {
             <br />
             <p className="text-lg max-w-300 text-black/60 font-serif p-4">{event.comment}</p>
          </div>
-         <div className="mb-10">
+         <div className="mb-10 flex justify-center flex-col items-center gap-6  ">
             <h3 className="font-serif font-semibold text-center mb-4 text-2xl md:text-3xl xl:text-4xl">Ubicación del Evento</h3>
-           <iframe
-            src={event.mapUrl}
-            width="1400"
-            height="450"
-            style={{border:0}} 
-            allowFullScreen
-            loading="lazy" 
-            referrerPolicy="no-referrer-when-downgrade">
-            </iframe>
+          <div className="relative border w-80 sm:w-160 md:w-190 lg:w-240 xl:w-300 h-[450px]">
+            <iframe
+              src={event.mapUrl}
+              className="absolute inset-0 w-full h-full"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
          </div>
-    <div className="my-8 flex justify-center w-full px-4 "> 
-     <div className="w-full  max-w-2xl overflow-hidden rounded-2xl shadow-sm border border-gray-200">
-      <div className="grid grid-cols-[1fr_120px_100px] items-center px-6 h-12 bg-black text-white font-bold text-xs tracking-widest uppercase">
+      <div className="my-8 flex justify-center w-full px-4 "> 
+       <div className="w-full  max-w-2xl overflow-hidden rounded-2xl shadow-sm border border-gray-200">
+        <div className="grid grid-cols-[1fr_120px_100px] items-center px-6 h-12 bg-black text-white font-bold text-xs tracking-widest uppercase">
         <span>ZONA</span>
         <span className="text-center">PRECIO</span>
         <span className="text-right">CANTIDAD</span>
