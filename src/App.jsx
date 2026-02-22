@@ -6,7 +6,7 @@ import {Home, EventDetails, Login, Register, ErrorAutentificacion, Users, UsersD
 import { useSelector } from 'react-redux';
 import { AuthProvider } from './context/AuthContext';
 import RoleGuard from './utils/RoleGuard';
-import ProtecteRoute from './utils/protecteRoute';
+import ProtecteRoute from './utils/ProtecteRoute';
 import Discounts from './pages/Discounts';
 import Footer from './componenst/Footer';
 
