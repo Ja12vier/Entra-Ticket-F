@@ -17,3 +17,4 @@ export {default as DiscountsAll} from './DiscountsAll';
 export {default as ValidaTicket} from './ValidaTicket';
 export {default as TicketRebend} from './TicketRebend';
 export {default as ChekoutSuccess} from './ChekoutSuccess';
+export {default as Contact} from './contact';

@@ -2,7 +2,7 @@
 import './App.css';
 import {HashRouter, Routes, Route} from 'react-router-dom';
 import {IsLoaders, Navbar} from './componenst/index';
-import {Home, EventDetails, Login, Register, ErrorAutentificacion, Users, UsersDetails, CreateEvents, SectionAreas, PurchasedTicket, DiscountsAll, ValidaTicket, TicketRebend, ChekoutSuccess} from "./pages/index";
+import {Home, EventDetails, Login, Register, ErrorAutentificacion, Users, UsersDetails, CreateEvents, SectionAreas, PurchasedTicket, DiscountsAll, ValidaTicket, TicketRebend, ChekoutSuccess, Contact} from "./pages/index";
 import { useSelector } from 'react-redux';
 import { AuthProvider } from './context/AuthContext';
 import RoleGuard from './utils/RoleGuard';
@@ -30,6 +30,7 @@ function App() {
           <Route path="/error-autentificacion" element={<ErrorAutentificacion />}/>
           <Route path='/ticket-rebend-event/:id' element={<TicketRebend />} />
           <Route path="/checkout-success" element={<ChekoutSuccess />} />
+          <Route path="/contact" element={<Contact />} />
 
           <Route element={<ProtecteRoute />} >
             <Route path="/create-events" element={<CreateEvents />}/>
