@@ -131,7 +131,7 @@ const Navbar = () => {
                     md:static md:flex md:flex-row md:bg-transparent md:gap-8 lg:gap-16 md:text-lg md:inset-auto md:translate-x-0
                     ${isMenuOpen ? "translate-x-0" : "translate-x-full"}
                 `}>
-                    <Link onClick={() => setIsMenuOpen(false)} to={"/contact"} className="hover:text-red-600">Contacto</Link>
+                    <Link onClick={() => setIsMenuOpen(false)} to={"/contacts"} className="hover:text-red-600">Contacto</Link>
                     <Link onClick={() => setIsMenuOpen(false)} className="hover:text-red-600" to={"/create-events"}>Crear Evento</Link>
                     <Link onClick={() => setIsMenuOpen(false)} to={"/login"} className="hover:text-red-600">Login</Link>
                     

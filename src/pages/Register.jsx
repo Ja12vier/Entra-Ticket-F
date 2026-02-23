@@ -41,12 +41,12 @@ const Register = () => {
      return (
       
         <div className="flex justify-center items-center">
-          {/* {registro} */}
+          
             <Card className=" my-20 w-80  sm:w-140  shadow-2xl">
             <img src={logi} alt="Login" className="w-20 h-20 mx-auto mb-2" />
             <h2 className="text-center text-2xl">Registrate</h2>
           <form onSubmit={handleSubmit} className="flex flex-col  gap-4 py-10">
-            <div className="flex flex-wrap sm:flex-nowrap gap-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 <div>
                 <div className="mb-2 w-64 block">
                   <Label htmlFor="name">Nombre</Label>
@@ -60,7 +60,7 @@ const Register = () => {
                 <TextInput id="last_name" type="text" placeholder="Apellido" required />
               </div>
             </div>
-            <div className="flex flex-wrap sm:flex-nowrap gap-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
               <div>
                 <div className="mb-2 w-64 block">
                   <Label htmlFor="email">Correo</Label>
@@ -74,7 +74,7 @@ const Register = () => {
                 <TextInput id="password" type="password" placeholder="*********" required />
               </div>
             </div>
-            <div className="flex flex-wrap sm:flex-nowrap gap-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
               <div>
                 <div className="mb-2 w-64 block">
                   <Label htmlFor="identity_document">Documento de identidad</Label>
@@ -88,7 +88,7 @@ const Register = () => {
                 <TextInput id="phone" type="text" placeholder="809-484-1713" required />
               </div>
             </div>
-             <div className="flex flex-wrap sm:flex-nowrap gap-2">
+             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
               <div>
                 <div className="mb-2 w-64 block">
                   <Label htmlFor="gender">Género</Label>

@@ -1,6 +1,6 @@
 
 
-const Contact = () => {
+const Contacts = () => {
   return (
     <section className="flex flex-col items-center justify-center py-20 px-4 bg-white">
       <div className="max-w-md w-full text-center">
@@ -51,4 +51,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Contacts;
