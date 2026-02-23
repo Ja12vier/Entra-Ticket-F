@@ -79,7 +79,8 @@ const Navbar = () => {
                 }, 1000);
             });
     }
-
+   console.log(user?.rolle);
+   
     const buyCart = (total) => {
         const data = { currencyCode: "USD", totalValue: total };
         dispatch(setIsloader(true));

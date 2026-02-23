@@ -14,9 +14,7 @@ const Login = () => {
 
     const handleSubmit=(e)=>{
         e.preventDefault();
-        console.log(e.target[2].value);
-        
-
+      
         const data={
             email:e.target[0].value,
             password:e.target[1].value

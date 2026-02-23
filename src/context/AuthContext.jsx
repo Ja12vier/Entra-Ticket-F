@@ -11,7 +11,7 @@ export const AuthProvider=({children})=>{
 
     useEffect(()=>{
          axios
-         .get("http://localhost:3000/api/v1/users/me",{
+         .get("https://entra-ticket-morning-darkness-5746.fly.dev/api/v1/users/me",{
             headers:{
                 Authorization:`Bearer ${token}`
             }
