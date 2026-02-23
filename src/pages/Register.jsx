@@ -39,7 +39,9 @@ const Register = () => {
     });
   }
      return (
+      
         <div className="flex justify-center items-center">
+          {/* {registro} */}
             <Card className=" my-20 w-80  sm:w-140  shadow-2xl">
             <img src={logi} alt="Login" className="w-20 h-20 mx-auto mb-2" />
             <h2 className="text-center text-2xl">Registrate</h2>
