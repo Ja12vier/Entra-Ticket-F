@@ -12,7 +12,6 @@ const Home=()=> {
   const dispatch=useDispatch();
   const events=useSelector(state=>state.events);
   const [searchTerm, setSearchTerm] = useState('');
-  console.log(events);
 
   useEffect(() => {
     dispatch(getThumbsEvents(searchTerm));

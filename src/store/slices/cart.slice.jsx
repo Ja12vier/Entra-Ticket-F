@@ -4,6 +4,7 @@ import axios from "axios";
 import { setIsloader } from "./isLoader.slice";
 import Config from "../../utils/Config";
 
+
 export const CartSlice=createSlice({
     name:"cart",
     initialState:[],
@@ -15,6 +16,8 @@ export const CartSlice=createSlice({
 });
 
 export const getCartThunk=()=>(dispatch)=>{
+    const token=localStorage.getItem("token");
+    if(!token) return;
     dispatch(setIsloader(true));
 
     axios

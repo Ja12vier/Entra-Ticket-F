@@ -9,8 +9,7 @@ import { useDispatch } from "react-redux";
 import { setIsloader } from "../store/slices/isLoader.slice.jsx";
 const Users=()=>{
     const [users, setUsers]=useState([]);
-    const dispatch=useDispatch()
-    console.log(users);
+    const dispatch=useDispatch();
     
     useEffect(()=>{
       dispatch(setIsloader(true));

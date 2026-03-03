@@ -43,7 +43,6 @@ const Discounts = () => {
     axios
     .post(`https://entra-ticket-morning-darkness-5746.fly.dev/api/v1/discount-coupons`, data, Config())
     .then((resp)=>{
-      console.log(resp.data),
       setQuantityDiscount(data.maxUsed),
       setAlertDiscount(true)
       setAlertError(false)

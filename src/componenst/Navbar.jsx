@@ -13,9 +13,10 @@ import { getCartThunk } from "../store/slices/cart.slice";
 import { setShowCart } from "../store/slices/showCart.slice";
 import { TbShoppingCartDollar, TbTicketOff } from "react-icons/tb";
 import { Alert } from "flowbite-react";
+import { AuthProvider } from "../context/AuthContext";
 
 const Navbar = () => {
-    const { user } = useAuth();
+    const { user, token } = useAuth();
     const cart = useSelector((state) => state.cart);
     const showCartState = useSelector((state) => state.showCart);
     const dispatch = useDispatch();
@@ -33,6 +34,7 @@ const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     useEffect(() => {
+        if(!token)return;
         dispatch(getCartThunk());
         setErrorCupon(null);
     }, []);
@@ -79,7 +81,6 @@ const Navbar = () => {
                 }, 1000);
             });
     }
-   console.log(user?.rolle);
    
     const buyCart = (total) => {
         const data = { currencyCode: "USD", totalValue: total };

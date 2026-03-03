@@ -23,7 +23,6 @@ const Login = () => {
         axios
         .post("https://entra-ticket-morning-darkness-5746.fly.dev/api/v1/users/login",data)
         .then((resp) =>{
-            console.log(resp.data);
             login(resp.data.token, resp.data.user);
             setShowAlert(true);
             setTimeout(() => {
